@@ -118,7 +118,6 @@
 // const result = calculateBirthYear({ name: "Laylo", age: 20 });
 // console.log(result);
 
-
 // // ============================================================ //
 // // ========================== 2-QISM ========================== //
 // // ============================================================ //
@@ -127,3 +126,88 @@
 // // 1-mashq //
 // // ======= //
 
+// function updateUser(user) {
+//   if (Object.isFrozen(user)) {
+//     return "Object is frozen";
+//   }
+
+//   user.age += 1;
+//   return user;
+// }
+
+// const frozenUser = Object.freeze({ name: "Ulug'bek", age: 20 });
+// console.log(updateUser(frozenUser));
+
+// // ======= //
+// // 2-mashq //
+// // ======= //
+
+// function checkFrozenStatus(obj) {
+//   if (Object.isFrozen(obj)) {
+//     return "Frozen";
+//   } else {
+//     return "Not frozen";
+//   }
+// }
+
+// const car = Object.freeze({ model: "Malibu" });
+// console.log(checkFrozenStatus(car));
+
+// // ======= //
+// // 3-mashq //
+// // ======= //
+
+// function addProperty(obj, key, value) {
+//   if (Object.isSealed(obj)) {
+//     return "Cannot add new property";
+//   } else {
+//     obj[key] = value;
+//   }
+// }
+
+// const person = { name: "Ali" };
+// Object.seal(person);
+// console.log(addProperty(person, "age", 25));
+
+// // ======= //
+// // 4-mashq //
+// // ======= //
+
+// function isItSealed(obj) {
+//   if (Object.isSealed(obj)) {
+//     return "Sealed";
+//   } else {
+//     return "Not sealed";
+//   }
+// }
+
+// const phone = Object.seal({ brand: "iPhone" });
+// console.log(isItSealed(phone));
+
+// // ======= //
+// // 5-mashq //
+// // ======= //
+
+// function checkProperty(obj, key) {
+//   return key in obj;
+// }
+
+// const book = { title: "JS Fundamentals", author: "Mirzo" };
+
+// console.log(checkProperty(book, "author"));
+// console.log(checkProperty(book, "price"));
+
+// // ======= //
+// // 6-mashq //
+// // ======= //
+
+// function isOwnKey(obj, key) {
+//   return obj.hasOwnProperty(key);
+// }
+
+// const parent = { name: "Parent" };
+// const child = Object.create(parent);
+// child.age = 10;
+
+// console.log(isOwnKey(child, "age"));
+// console.log(isOwnKey(child, "name"));
